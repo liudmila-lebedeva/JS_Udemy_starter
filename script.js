@@ -299,169 +299,291 @@ if (age < 13) {
 
 //Functions
 
-function calculateAge(birthYear) {
-    return 2020 - birthYear;
-}
+// function calculateAge(birthYear) {
+//     return 2020 - birthYear;
+// }
 
-var ageJohn = calculateAge(1990);
-var ageMike = calculateAge(1948);
-var ageJane = calculateAge(1969);
-console.log(ageJohn, ageMike, ageJane);
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1948);
+// var ageJane = calculateAge(1969);
+// console.log(ageJohn, ageMike, ageJane);
 
-function yearsUntilRetirement(year, firstName) {
-    var age = calculateAge(year);
-    var retirement = 65 - age;
+// function yearsUntilRetirement(year, firstName) {
+//     var age = calculateAge(year);
+//     var retirement = 65 - age;
 
-    if (retirement > 0) {
-        console.log(firstName + ' is retires in '  + retirement + ' years');
-    } else {
-        console.log(firstName + ' is already retired');
-    }
+//     if (retirement > 0) {
+//         console.log(firstName + ' is retires in '  + retirement + ' years');
+//     } else {
+//         console.log(firstName + ' is already retired');
+//     }
     
+// }
+
+// yearsUntilRetirement (1990, 'John');
+// yearsUntilRetirement (1948, 'Mike');
+// yearsUntilRetirement (1969, 'Jane');
+
+
+// //Arrays
+
+// var names = ['John', 'Mark', 'Jane'];
+// var years = new Array(1990, 1948, 1960);
+
+// console.log(names);
+// console.log(names.length);
+
+// names[1] = 'Ben';
+// names[names.length] = 'Mary';
+// console.log(names);
+
+// //push добавляет элемент в конец
+
+// var john = ['John', 'Smith', 1990, 'designer', false];
+// john.push('blue');
+// console.log(john);
+
+// //unshift добавляет элемент вперед
+// john.unshift('Mr.');
+// console.log(john);
+
+// //pop удаляет элемент с конца
+// john.pop();
+// john.pop();
+// console.log(john);
+
+// //shift удаляет первый элемент
+// john.shift();
+// console.log(john);
+
+// //indexOf показывает номер позиции элемента
+// console.log(john.indexOf(1990));
+
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer';
+// console.log(isDesigner);
+
+
+// var bills = [124, 48, 268];
+
+// function calculateTip(bills) {
+//     if(bills < 50) {
+//         return bills * 0.2;
+//     } else if (bills > 50 && bills < 200){
+//         return bills * 0.15;
+//     } else {
+//         return bills * 0.1;
+//     }
+// }
+
+// var finalBills = [calculateTip(bills[0]) + bills[0], calculateTip(bills[1]) + bills[1], calculateTip(bills[2]) + bills[2]]; 
+
+// console.log(bills, finalBills);
+
+// //Objects and properties
+
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['Mark', 'Jane', 'Bob', 'Emilie'],
+//     job: 'teacher',
+//     isMarried: false
+// };
+
+// console.log(john.firstName);
+// console.log(john['lastName']);
+
+
+// //how to change properties
+// john.job = 'designer';
+// john['isMarried'] = true;
+
+// console.log(john);
+
+// //new object sintax
+
+// var jane = new Object();
+// jane.firstName = 'Jane';
+// jane.birthYear = 1987;
+// jane['lastName'] = 'Smith';
+
+// console.log(jane);
+
+// //objects and methods
+
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['Mark', 'Jane', 'Bob', 'Emilie'],
+//     job: 'teacher',
+//     isMarried: false,
+//     calcAge: function(){
+//         this.age = 2020 - this.birthYear; //this = john
+//     }
+// };
+
+// john.calcAge();
+// console.log(john);
+
+
+// //coding challenge 4 *******************************************************
+
+// var john = {
+//     firstName: 'John',
+//     mass: 110,
+//     height: 1.93,
+//     calcBMIjohn: function(){
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// };
+
+// john.calcBMIjohn();
+// console.log(john);
+
+// var mark = {
+//     firstName: 'Mark',
+//     mass: 75,
+//     height: 1.80,
+//     calcBMImark: function(){
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// };
+
+// mark.calcBMImark();
+// console.log(mark);
+
+// if (john.bmi > mark.bmi) {
+//     console.log(john.firstName + ' has ' + john.bmi + ' BMI');
+// } else if (john.bmi < mark.bmi) {
+//     console.log(mark.firstName + ' has ' + mark.bmi + ' BMI');
+// } else {
+//     console.log(mark.firstName + ' and' + john.firstName + ' have the same BMI');
+// }
+    
+//*************loop and iteration***********************************
+// FOR loop
+// for (var i = 1; i <= 20; i++) {
+//     console.log(i);
+// }
+
+// for (var i = 0; i <= 20; i+=2) { //увеличить на два
+//     console.log(i);
+// }
+
+// //выводим весь массив в консоль
+
+// var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+
+// for (var i = 0; i < john.length; i++) {
+//     console.log(john[i]);
+// }
+
+
+// //while loop******
+
+// var i = 0;
+// while(i < john.length) {
+//     console.log(john[i]);
+//     i++;
+// }
+
+//continue and break statements  отразить только строку
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
 }
 
-yearsUntilRetirement (1990, 'John');
-yearsUntilRetirement (1948, 'Mike');
-yearsUntilRetirement (1969, 'Jane');
-
-
-//Arrays
-
-var names = ['John', 'Mark', 'Jane'];
-var years = new Array(1990, 1948, 1960);
-
-console.log(names);
-console.log(names.length);
-
-names[1] = 'Ben';
-names[names.length] = 'Mary';
-console.log(names);
-
-//push добавляет элемент в конец
-
-var john = ['John', 'Smith', 1990, 'designer', false];
-john.push('blue');
-console.log(john);
-
-//unshift добавляет элемент вперед
-john.unshift('Mr.');
-console.log(john);
-
-//pop удаляет элемент с конца
-john.pop();
-john.pop();
-console.log(john);
-
-//shift удаляет первый элемент
-john.shift();
-console.log(john);
-
-//indexOf показывает номер позиции элемента
-console.log(john.indexOf(1990));
-
-var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer';
-console.log(isDesigner);
-
-
-var bills = [124, 48, 268];
-
-function calculateTip(bills) {
-    if(bills < 50) {
-        return bills * 0.2;
-    } else if (bills > 50 && bills < 200){
-        return bills * 0.15;
-    } else {
-        return bills * 0.1;
-    }
+//break останавливается, там где появляются ограничения - не строка, например
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break;
+    console.log(john[i]);
 }
 
-var finalBills = [calculateTip(bills[0]) + bills[0], calculateTip(bills[1]) + bills[1], calculateTip(bills[2]) + bills[2]]; 
+// Looping backwards
+for (var i = john.length - 1; i >= 0; i--) {
+    console.log(john[i]);
+}
 
-console.log(bills, finalBills);
+//************* Coding Challenge 5 ******************
 
-//Objects and properties
 
 var john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    birthYear: 1990,
-    family: ['Mark', 'Jane', 'Bob', 'Emilie'],
-    job: 'teacher',
-    isMarried: false
+        name: 'John',
+        bills: [124, 48, 268, 180, 142],
+        tips: [],
+        finalBills: [],
+        calcTips: function () {
+            for (i = 0; i < this.bills.length; i++) {
+                if(this.bills[i] < 50) {
+                    this.tips[i] = this.bills[i] * 0.2;
+                    
+                } else if (this.bills >= 50 && this.bills[i] < 200){
+                    this.tips[i] = this.bills[i] * 0.15;
+                    
+                } else {
+                    this.tips[i] = this.bills[i] * 0.1;
+                } 
+                this.finalBills[i] = this.tips[i] + this.bills[i];
+            }
+        },
+
+                
 };
 
-console.log(john.firstName);
-console.log(john['lastName']);
 
-
-//how to change properties
-john.job = 'designer';
-john['isMarried'] = true;
-
-console.log(john);
-
-//new object sintax
-
-var jane = new Object();
-jane.firstName = 'Jane';
-jane.birthYear = 1987;
-jane['lastName'] = 'Smith';
-
-console.log(jane);
-
-//objects and methods
-
-var john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    birthYear: 1990,
-    family: ['Mark', 'Jane', 'Bob', 'Emilie'],
-    job: 'teacher',
-    isMarried: false,
-    calcAge: function(){
-        this.age = 2020 - this.birthYear; //this = john
-    }
-};
-
-john.calcAge();
-console.log(john);
-
-
-//coding challenge 4 *******************************************************
-
-var john = {
-    firstName: 'John',
-    mass: 110,
-    height: 1.93,
-    calcBMIjohn: function(){
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    }
-};
-
-john.calcBMIjohn();
-console.log(john);
 
 var mark = {
-    firstName: 'Mark',
-    mass: 75,
-    height: 1.80,
-    calcBMImark: function(){
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    }
+    name: 'Mark',
+    bills: [77, 375, 110, 45],
+    tips: [],
+    finalBills: [],
+    calcTips: function () {
+        for (i = 0; i < this.bills.length; i++) {
+            if(this.bills[i] < 100) {
+                this.tips[i] = this.bills[i] * 0.2;
+                
+            } else if (this.bills > 100 && this.bills[i] < 300){
+                this.tips[i] = this.bills[i] * 0.1;
+                
+            } else {
+                this.tips[i] = this.bills[i] * 0.25;
+            } 
+            this.finalBills[i] = this.tips[i] + this.bills[i];
+        }
+    },
+
+            
 };
 
-mark.calcBMImark();
-console.log(mark);
+john.calcTips();
+mark.calcTips();
+console.log(mark, john);
 
-if (john.bmi > mark.bmi) {
-    console.log(john.firstName + ' has ' + john.bmi + ' BMI');
-} else if (john.bmi < mark.bmi) {
-    console.log(mark.firstName + ' has ' + mark.bmi + ' BMI');
-} else {
-    console.log(mark.firstName + ' and' + john.firstName + ' have the same BMI');
+
+function calcAvgTips(tips) {
+    var sum = 0;
+    for (var i = 0; i < tips.length; i++) {
+        sum = sum + tips[i];
+    }
+    return (sum/tips.length);
 }
-    
+
+mark.avarageTips = calcAvgTips(mark.tips);
+john.avarageTips = calcAvgTips(john.tips);
+console.log(john, mark);
+
+if (john.avarageTips > mark.avarageTips) {
+    console.log(john.name + ' gives more tips')
+} else if (john.avarageTips < mark.avarageTips) {
+    console.log(mark.name + ' gives more tips')
+} else {
+    console.log('they give the same tips');
+}
+
 
 
